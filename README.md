@@ -9,15 +9,6 @@ The full source code, commit history, and complete team contributions are hosted
 
 👉 **[View the ARBR Source Code on GitHub](https://github.com/total64/attack-resistant-backup-recovery)**
 
-## 📂 Project Structure
-- `backend/` — Server-side logic
-- `detector/` — Attack detection modules
-- `frontend/` — User interface
-- `isolation/` — Core isolation and recovery scripts
-- `recovery/scripts/` — Firewall and recovery automation
-- `rules/` — Security rules and verification
-- `tests/` — Test suites
-
 ## 👥 My Contribution
 
 My role was to build the brain of the system: the **Cyber Resilience Decision Engine**, along with the data models, policies, and rules. 
@@ -31,11 +22,12 @@ When the risk engine detects a threat, my engine decides how the system should r
 
 I also built the **audit logging** to ensure every decision is tracked.
 
-### 📁 Key Files I Built
+### 📁 Key Files I Built (View on my feature branch)
+You can see my exact work on the `feature/decision-engine` branch here:
 
-- **[Decision Models](https://github.com/total64/attack-resistant-backup-recovery/blob/main/backend/app/decision/models.py)** — The core data structures (like `SecurityEvent`) used by the Decision Engine. *(See my commit adding the `host_id` tracking).*
-- **[Unit Tests for Decision Engine](https://github.com/total64/attack-resistant-backup-recovery/blob/main/backend/tests/unit/test_decision_engine.py)** — Comprehensive test suite proving the logic works.
-- **[Integration Tests](https://github.com/total64/attack-resistant-backup-recovery/blob/main/backend/tests/test_decision_engine_integration.py)** — Ensuring the engine plays nicely with the rest of the system.
+- **[Decision Engine Models](https://github.com/total64/attack-resistant-backup-recovery/blob/feature/decision-engine/backend/app/decision/models.py)** — The core data structures (like `SecurityEvent`) used by the Decision Engine. 
+- **[Unit Tests for Decision Engine](https://github.com/total64/attack-resistant-backup-recovery/blob/feature/decision-engine/backend/tests/unit/test_decision_engine.py)** — Comprehensive test suite proving the logic works.
+- **[Integration Tests](https://github.com/total64/attack-resistant-backup-recovery/blob/feature/decision-engine/backend/tests/test_decision_engine_integration.py)** — Ensuring the engine plays nicely with the rest of the system.
 
 **📊 Test Results:**
-I successfully fixed the `SecurityEvent` model compatibility and verified the logic by getting **all 35 tests to pass** (Commit `9d4fbaa`).
+I successfully fixed the `SecurityEvent` model compatibility and verified the logic by getting **all 35 tests to pass**.
