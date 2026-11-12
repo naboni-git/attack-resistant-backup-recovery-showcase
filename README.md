@@ -31,8 +31,11 @@ When the risk engine detects a threat, my engine decides how the system should r
 
 I also built the **audit logging** to ensure every decision is tracked.
 
-### 📁 Key Files I Built (on the `feature/decision-engine` branch)
-- **[Decision Engine Core](https://github.com/total64/attack-resistant-backup-recovery/blob/feature/decision-engine/backend/app/main.py)** — The main logic routing threats to the correct action.
-- **[Risk Scoring Model](https://github.com/total64/attack-resistant-backup-recovery/blob/feature/decision-engine/backend/app/risk.py)** — The engine that assesses threat severity.
-- **[Data Models](https://github.com/total64/attack-resistant-backup-recovery/blob/feature/decision-engine/backend/app/models.py)** — The structure for events and decisions.
-- **[Unit Tests](https://github.com/total64/attack-resistant-backup-recovery/tree/feature/decision-engine/backend/tests/unit)** — 35 passing tests covering decision execution and risk assessment.
+### 📁 Key Files I Built
+
+- **[Decision Models](https://github.com/total64/attack-resistant-backup-recovery/blob/main/backend/app/decision/models.py)** — The core data structures (like `SecurityEvent`) used by the Decision Engine. *(See my commit adding the `host_id` tracking).*
+- **[Unit Tests for Decision Engine](https://github.com/total64/attack-resistant-backup-recovery/blob/main/backend/tests/unit/test_decision_engine.py)** — Comprehensive test suite proving the logic works.
+- **[Integration Tests](https://github.com/total64/attack-resistant-backup-recovery/blob/main/backend/tests/test_decision_engine_integration.py)** — Ensuring the engine plays nicely with the rest of the system.
+
+**📊 Test Results:**
+I successfully fixed the `SecurityEvent` model compatibility and verified the logic by getting **all 35 tests to pass** (Commit `9d4fbaa`).
