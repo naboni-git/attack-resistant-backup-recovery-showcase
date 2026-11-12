@@ -26,8 +26,7 @@ I also built the **audit logging** to ensure every decision is tracked.
 You can see my exact work on the `feature/decision-engine` branch here:
 
 - **[Decision Engine Models](https://github.com/total64/attack-resistant-backup-recovery/blob/feature/decision-engine/backend/app/decision/models.py)** — The core data structures (like `SecurityEvent`) used by the Decision Engine. 
-- **[Unit Tests for Decision Engine](https://github.com/total64/attack-resistant-backup-recovery/blob/feature/decision-engine/backend/tests/unit/test_decision_engine.py)** — Comprehensive test suite proving the logic works.
-- **[Integration Tests](https://github.com/total64/attack-resistant-backup-recovery/blob/feature/decision-engine/backend/tests/test_decision_engine_integration.py)** — Ensuring the engine plays nicely with the rest of the system.
+- **[Unit Tests Folder](https://github.com/total64/attack-resistant-backup-recovery/tree/feature/decision-engine/backend/tests/unit)** — The comprehensive test suite for the Decision Engine and Risk Engine.
 
 **📊 Test Results:**
 I successfully fixed the `SecurityEvent` model compatibility and verified the logic by getting **all 35 tests to pass**.
